@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS file for styling -->
+</head>
+<body>
+    <div class="game-container">
+        <!-- Canvas for the Tetris game -->
+        <canvas id="tetris" width="400" height="800"></canvas>
+        
+        <!-- Score container -->
+        <div class="score-container">
+            <h1>Tetris</h1> <!-- Game title -->
+            <div id="score">Score: 0</div> <!-- Score display -->
+        </div>
+        
+        <!-- Game over modal -->
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span> <!-- Close button -->
+                <p style="color: black;">Game Over! Your score is <span id="modal-score"></span></p> <!-- Game over message with score -->
+                <button onclick="restartGameFromModal()">Restart Game</button> <!-- Restart button -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file for game logic -->
+    <script src="tetris.js"></script>
+</body>
+</html>
